@@ -7,12 +7,19 @@ export default function Intro() {
         Blog.
       </h1>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A statically generated blog example using{' '}
+        A client side generated blog example using{' '}
         <a
-          href="https://nextjs.org/"
+          href="https://docs.microsoft.com/en-us/azure/static-web-apps/"
           className="underline hover:text-success duration-200 transition-colors"
         >
-          Next.js
+          Static Web Apps
+        </a>{' '}
+        and{' '}
+        <a
+          href="https://reactjs.org/"
+          className="underline hover:text-success duration-200 transition-colors"
+        >
+          React
         </a>{' '}
         and{' '}
         <a

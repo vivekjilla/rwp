@@ -27,7 +27,7 @@ export default function Alert({ preview }: any) {
             <>
               The source code for this blog is{' '}
               <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
+                href={`https://github.com/vivekjilla/rwp`}
                 className="underline hover:text-success duration-200 transition-colors"
               >
                 available on GitHub
