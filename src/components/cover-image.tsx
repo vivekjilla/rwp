@@ -2,9 +2,7 @@ import cn from 'classnames'
 
 interface Props {
   title: string
-  coverImage: {
-    sourceUrl: string
-  }
+  coverImage: string
   slug?: string
 }
 
@@ -14,7 +12,7 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
       width={2000}
       height={1000}
       alt={`Cover Image for ${title}`}
-      src={coverImage?.sourceUrl}
+      src={coverImage}
       className={cn('shadow-small', {
         'hover:shadow-medium transition-shadow duration-200': slug,
       })}

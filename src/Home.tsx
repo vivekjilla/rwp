@@ -4,9 +4,10 @@ import HeroPost from './components/hero-post'
 import Intro from './components/intro'
 import Layout from './components/layout'
 import useFetch from './useFetch'
+import { WORDPRESS_API_URL } from './lib/constants'
 
 export default function Home() {
-  const { data, loading, error } = useFetch("https://public-api.wordpress.com/rest/v1.1/sites/adityadotdev.wordpress.com/posts")
+  const { data, loading, error } = useFetch(WORDPRESS_API_URL)
   var morePosts = []
   var heroPost = undefined;
 
@@ -23,7 +24,7 @@ export default function Home() {
         {heroPost && (
           <HeroPost
             title={heroPost.title}
-            coverImage={heroPost.featuredImage}
+            coverImage={heroPost.featured_image}
             date={heroPost.date}
             author={heroPost.author}
             slug={heroPost.slug}

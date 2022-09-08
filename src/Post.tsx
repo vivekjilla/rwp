@@ -11,9 +11,10 @@ import useFetch from './useFetch'
 import {
   useParams
 } from "react-router-dom";
+import { WORDPRESS_API_URL } from './lib/constants'
 
 export default function Post() {
-  const { data, loading, error } = useFetch("https://public-api.wordpress.com/rest/v1.1/sites/adityadotdev.wordpress.com/posts")
+  const { data, loading, error } = useFetch(WORDPRESS_API_URL)
   let morePosts = []
   let post = undefined;
   let { slug } = useParams();
@@ -29,14 +30,12 @@ export default function Post() {
     <Layout preview={false}>
       <Container>
         <Header />
-        {!post ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
+        {post && (
           <>
             <article>
               <PostHeader
                 title={post.title}
-                coverImage={post.featuredImage}
+                coverImage={post.featured_image}
                 date={post.date}
                 author={post.author}
                 categories={post.categories}
